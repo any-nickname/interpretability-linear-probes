@@ -1,0 +1,29 @@
+{
+  "model": "qwen",
+  "train_name": "itw_manual_d1_train",
+  "eval_name": "itw_manual_d1_eval",
+  "n_permutations": 30,
+  "n_layers": 28,
+  "train_records": 236,
+  "eval_records": 60,
+  "train_pos_real": 118,
+  "eval_pos": 30,
+  "overall_mean_auroc": 0.49324338624338626,
+  "overall_std_auroc": 0.058700652109902794,
+  "overall_min_auroc": 0.3066666666666667,
+  "overall_max_auroc": 0.7011111111111111,
+  "best_mean_layer": {
+    "layer": 18,
+    "mean_auroc": 0.5019259259259259,
+    "std_auroc": 0.04952901487901578,
+    "min_auroc": 0.41444444444444445,
+    "max_auroc": 0.5977777777777777
+  },
+  "worst_mean_layer": {
+    "layer": 4,
+    "mean_auroc": 0.48399999999999993,
+    "std_auroc": 0.0691415463161637,
+    "min_auroc": 0.3433333333333334,
+    "max_auroc": 0.6355555555555555
+  }
+}
