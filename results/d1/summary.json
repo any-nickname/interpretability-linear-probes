@@ -1,0 +1,45 @@
+{
+  "probe": "data/probes/itw_manual_d1/qwen.pt",
+  "activation_dir": "data/activations/ood_clean/qwen",
+  "text_baseline_dir": "data/validation/itw_manual_d1/qwen/ood_clean/text_baselines",
+  "dev_frac": 0.5,
+  "seed": 42,
+  "selection_rule": "single global layer maximizing unweighted mean AUROC across OOD-dev datasets",
+  "selected_layer": 25,
+  "selected_layer_mean_dev_auroc": 0.8659222855029585,
+  "selected_layer_mean_test_auroc": 0.8611214644970414,
+  "datasets": [
+    {
+      "dataset": "ood_advbench_alpaca",
+      "n_records": 1040,
+      "dev_records": 520,
+      "test_records": 520,
+      "dev_harm": 260,
+      "test_harm": 260
+    },
+    {
+      "dataset": "ood_harmbench_alpaca",
+      "n_records": 800,
+      "dev_records": 400,
+      "test_records": 400,
+      "dev_harm": 200,
+      "test_harm": 200
+    },
+    {
+      "dataset": "ood_jailbreakbench",
+      "n_records": 200,
+      "dev_records": 100,
+      "test_records": 100,
+      "dev_harm": 50,
+      "test_harm": 50
+    },
+    {
+      "dataset": "ood_xstest",
+      "n_records": 450,
+      "dev_records": 225,
+      "test_records": 225,
+      "dev_harm": 100,
+      "test_harm": 100
+    }
+  ]
+}
