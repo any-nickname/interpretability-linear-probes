@@ -1,0 +1,85 @@
+{
+  "probe": "data/probes/itw_manual_d2/qwen.pt",
+  "dev_labels": "data/responses/d2_ood_balanced_200/qwen/qwen_d2_ood_balanced_200_dev_labeled.jsonl",
+  "test_labels": "data/responses/d2_ood_balanced_200/qwen/qwen_d2_ood_balanced_200_test_labeled.jsonl",
+  "activation_files": [
+    "data/activations/ood_clean/qwen/ood_advbench_alpaca_clean.pt",
+    "data/activations/ood_clean/qwen/ood_harmbench_alpaca_clean.pt",
+    "data/activations/ood_clean/qwen/ood_jailbreakbench_clean.pt",
+    "data/activations/ood_clean/qwen/ood_xstest_clean.pt"
+  ],
+  "positive_class": "refusal",
+  "negative_class": "compliance",
+  "dev_counts": {
+    "refusal": 50,
+    "compliance": 50
+  },
+  "test_counts": {
+    "compliance": 50,
+    "refusal": 50
+  },
+  "selected_layer_by_ood_dev": 18,
+  "selected_layer_dev_metrics": {
+    "n": 100,
+    "refusal": 50,
+    "compliance": 50,
+    "accuracy": 0.79,
+    "f1": 0.7469879518072289,
+    "precision": 0.9393939393939394,
+    "recall": 0.62,
+    "mean_p_refusal": 0.3419945240020752,
+    "auroc": 0.9484
+  },
+  "selected_layer_test_metrics": {
+    "n": 100,
+    "refusal": 50,
+    "compliance": 50,
+    "accuracy": 0.82,
+    "f1": 0.8085106382978723,
+    "precision": 0.8636363636363636,
+    "recall": 0.76,
+    "mean_p_refusal": 0.43212154507637024,
+    "auroc": 0.9116
+  },
+  "itw_eval_selected_layer_control": 20,
+  "itw_eval_selected_layer_control_dev_metrics": {
+    "n": 100,
+    "refusal": 50,
+    "compliance": 50,
+    "accuracy": 0.82,
+    "f1": 0.7954545454545454,
+    "precision": 0.9210526315789473,
+    "recall": 0.7,
+    "mean_p_refusal": 0.38302889466285706,
+    "auroc": 0.9039999999999999
+  },
+  "itw_eval_selected_layer_control_test_metrics": {
+    "n": 100,
+    "refusal": 50,
+    "compliance": 50,
+    "accuracy": 0.76,
+    "f1": 0.7551020408163265,
+    "precision": 0.7708333333333334,
+    "recall": 0.74,
+    "mean_p_refusal": 0.4756432771682739,
+    "auroc": 0.858
+  },
+  "best_test_layer_exploratory": 27,
+  "best_test_layer_metrics_exploratory": {
+    "n": 100,
+    "refusal": 50,
+    "compliance": 50,
+    "accuracy": 0.85,
+    "f1": 0.8648648648648649,
+    "precision": 0.7868852459016393,
+    "recall": 0.96,
+    "mean_p_refusal": 0.603493869304657,
+    "auroc": 0.9284
+  },
+  "activation_meta": {
+    "n_layers": 28,
+    "d_model": 2048,
+    "pooling": "last"
+  },
+  "note": "The selected layer is chosen only on OOD-dev. The best test layer is diagnostic only."
+}

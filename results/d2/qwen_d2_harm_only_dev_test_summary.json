@@ -1,0 +1,325 @@
+{
+  "probe": "data\\probes\\itw_manual_d2\\qwen.pt",
+  "positive_class": "refusal",
+  "negative_class": "compliance",
+  "split_strategy": "stratified by source and behavior_label with seed=42; singleton source-behavior groups go to dev",
+  "activation_files": [
+    "data\\activations\\ood_clean\\qwen\\ood_advbench_alpaca_clean.pt",
+    "data\\activations\\ood_clean\\qwen\\ood_harmbench_alpaca_clean.pt",
+    "data\\activations\\ood_clean\\qwen\\ood_jailbreakbench_clean.pt",
+    "data\\activations\\ood_clean\\qwen\\ood_xstest_clean.pt"
+  ],
+  "variants": {
+    "source_matched": {
+      "label_file": "data\\responses\\d2_ood_harm_stratified_interim\\qwen\\qwen_d2_ood_harm_only_source_matched_labeled.jsonl",
+      "split_group_summary": {
+        "advbench|compliance": {
+          "total": 1,
+          "dev": 1,
+          "test": 0
+        },
+        "advbench|refusal": {
+          "total": 1,
+          "dev": 1,
+          "test": 0
+        },
+        "harmbench|compliance": {
+          "total": 11,
+          "dev": 6,
+          "test": 5
+        },
+        "harmbench|refusal": {
+          "total": 11,
+          "dev": 6,
+          "test": 5
+        },
+        "jailbreakbench|compliance": {
+          "total": 15,
+          "dev": 8,
+          "test": 7
+        },
+        "jailbreakbench|refusal": {
+          "total": 15,
+          "dev": 8,
+          "test": 7
+        }
+      },
+      "dev": {
+        "n": 30,
+        "behavior": {
+          "compliance": 15,
+          "refusal": 15
+        },
+        "source": {
+          "advbench": 2,
+          "harmbench": 12,
+          "jailbreakbench": 16
+        },
+        "source_behavior": {
+          "advbench|compliance": 1,
+          "advbench|refusal": 1,
+          "harmbench|compliance": 6,
+          "harmbench|refusal": 6,
+          "jailbreakbench|compliance": 8,
+          "jailbreakbench|refusal": 8
+        }
+      },
+      "test": {
+        "n": 24,
+        "behavior": {
+          "compliance": 12,
+          "refusal": 12
+        },
+        "source": {
+          "harmbench": 10,
+          "jailbreakbench": 14
+        },
+        "source_behavior": {
+          "harmbench|compliance": 5,
+          "harmbench|refusal": 5,
+          "jailbreakbench|compliance": 7,
+          "jailbreakbench|refusal": 7
+        }
+      },
+      "selected_layer_by_dev_auroc": 17,
+      "selected_layer_dev_metrics": {
+        "n": 30,
+        "refusal": 15,
+        "compliance": 15,
+        "auroc": 0.9644444444444444,
+        "accuracy": 0.8,
+        "f1": 0.7692307692307693,
+        "precision": 0.9090909090909091,
+        "recall": 0.6666666666666666,
+        "mean_p_refusal": 0.37886562943458557
+      },
+      "selected_layer_test_metrics": {
+        "n": 24,
+        "refusal": 12,
+        "compliance": 12,
+        "auroc": 0.75,
+        "accuracy": 0.625,
+        "f1": 0.47058823529411764,
+        "precision": 0.8,
+        "recall": 0.3333333333333333,
+        "mean_p_refusal": 0.31125661730766296
+      },
+      "layer18_control_dev_metrics": {
+        "n": 30,
+        "refusal": 15,
+        "compliance": 15,
+        "auroc": 0.9555555555555556,
+        "accuracy": 0.8333333333333334,
+        "f1": 0.8148148148148148,
+        "precision": 0.9166666666666666,
+        "recall": 0.7333333333333333,
+        "mean_p_refusal": 0.41249343752861023
+      },
+      "layer18_control_test_metrics": {
+        "n": 24,
+        "refusal": 12,
+        "compliance": 12,
+        "auroc": 0.7777777777777778,
+        "accuracy": 0.7083333333333334,
+        "f1": 0.631578947368421,
+        "precision": 0.8571428571428571,
+        "recall": 0.5,
+        "mean_p_refusal": 0.34494519233703613
+      },
+      "layer20_control_dev_metrics": {
+        "n": 30,
+        "refusal": 15,
+        "compliance": 15,
+        "auroc": 0.9466666666666668,
+        "accuracy": 0.8333333333333334,
+        "f1": 0.8275862068965517,
+        "precision": 0.8571428571428571,
+        "recall": 0.8,
+        "mean_p_refusal": 0.4826612174510956
+      },
+      "layer20_control_test_metrics": {
+        "n": 24,
+        "refusal": 12,
+        "compliance": 12,
+        "auroc": 0.7708333333333334,
+        "accuracy": 0.7083333333333334,
+        "f1": 0.6956521739130435,
+        "precision": 0.7272727272727273,
+        "recall": 0.6666666666666666,
+        "mean_p_refusal": 0.4420098066329956
+      },
+      "best_test_layer_exploratory": 27,
+      "best_test_layer_metrics_exploratory": {
+        "n": 24,
+        "refusal": 12,
+        "compliance": 12,
+        "auroc": 0.8472222222222221,
+        "accuracy": 0.6666666666666666,
+        "f1": 0.6923076923076923,
+        "precision": 0.6428571428571429,
+        "recall": 0.75,
+        "mean_p_refusal": 0.5112131834030151
+      }
+    },
+    "harm_only_max": {
+      "label_file": "data\\responses\\d2_ood_harm_stratified_interim\\qwen\\qwen_d2_ood_harm_only_max_labeled.jsonl",
+      "split_group_summary": {
+        "advbench|compliance": {
+          "total": 1,
+          "dev": 1,
+          "test": 0
+        },
+        "advbench|refusal": {
+          "total": 8,
+          "dev": 4,
+          "test": 4
+        },
+        "harmbench|compliance": {
+          "total": 18,
+          "dev": 9,
+          "test": 9
+        },
+        "harmbench|refusal": {
+          "total": 11,
+          "dev": 6,
+          "test": 5
+        },
+        "jailbreakbench|compliance": {
+          "total": 15,
+          "dev": 8,
+          "test": 7
+        },
+        "jailbreakbench|refusal": {
+          "total": 15,
+          "dev": 8,
+          "test": 7
+        }
+      },
+      "dev": {
+        "n": 36,
+        "behavior": {
+          "compliance": 18,
+          "refusal": 18
+        },
+        "source": {
+          "advbench": 5,
+          "harmbench": 15,
+          "jailbreakbench": 16
+        },
+        "source_behavior": {
+          "advbench|compliance": 1,
+          "advbench|refusal": 4,
+          "harmbench|compliance": 9,
+          "harmbench|refusal": 6,
+          "jailbreakbench|compliance": 8,
+          "jailbreakbench|refusal": 8
+        }
+      },
+      "test": {
+        "n": 32,
+        "behavior": {
+          "compliance": 16,
+          "refusal": 16
+        },
+        "source": {
+          "harmbench": 14,
+          "jailbreakbench": 14,
+          "advbench": 4
+        },
+        "source_behavior": {
+          "advbench|refusal": 4,
+          "harmbench|compliance": 9,
+          "harmbench|refusal": 5,
+          "jailbreakbench|compliance": 7,
+          "jailbreakbench|refusal": 7
+        }
+      },
+      "selected_layer_by_dev_auroc": 18,
+      "selected_layer_dev_metrics": {
+        "n": 36,
+        "refusal": 18,
+        "compliance": 18,
+        "auroc": 0.9382716049382716,
+        "accuracy": 0.8611111111111112,
+        "f1": 0.8387096774193549,
+        "precision": 1.0,
+        "recall": 0.7222222222222222,
+        "mean_p_refusal": 0.36901959776878357
+      },
+      "selected_layer_test_metrics": {
+        "n": 32,
+        "refusal": 16,
+        "compliance": 16,
+        "auroc": 0.921875,
+        "accuracy": 0.78125,
+        "f1": 0.7586206896551724,
+        "precision": 0.8461538461538461,
+        "recall": 0.6875,
+        "mean_p_refusal": 0.4273141622543335
+      },
+      "layer18_control_dev_metrics": {
+        "n": 36,
+        "refusal": 18,
+        "compliance": 18,
+        "auroc": 0.9382716049382716,
+        "accuracy": 0.8611111111111112,
+        "f1": 0.8387096774193549,
+        "precision": 1.0,
+        "recall": 0.7222222222222222,
+        "mean_p_refusal": 0.36901959776878357
+      },
+      "layer18_control_test_metrics": {
+        "n": 32,
+        "refusal": 16,
+        "compliance": 16,
+        "auroc": 0.921875,
+        "accuracy": 0.78125,
+        "f1": 0.7586206896551724,
+        "precision": 0.8461538461538461,
+        "recall": 0.6875,
+        "mean_p_refusal": 0.4273141622543335
+      },
+      "layer20_control_dev_metrics": {
+        "n": 36,
+        "refusal": 18,
+        "compliance": 18,
+        "auroc": 0.9166666666666666,
+        "accuracy": 0.8055555555555556,
+        "f1": 0.7878787878787878,
+        "precision": 0.8666666666666667,
+        "recall": 0.7222222222222222,
+        "mean_p_refusal": 0.4031332731246948
+      },
+      "layer20_control_test_metrics": {
+        "n": 32,
+        "refusal": 16,
+        "compliance": 16,
+        "auroc": 0.921875,
+        "accuracy": 0.84375,
+        "f1": 0.8484848484848485,
+        "precision": 0.8235294117647058,
+        "recall": 0.875,
+        "mean_p_refusal": 0.5161417126655579
+      },
+      "best_test_layer_exploratory": 27,
+      "best_test_layer_metrics_exploratory": {
+        "n": 32,
+        "refusal": 16,
+        "compliance": 16,
+        "auroc": 0.94921875,
+        "accuracy": 0.84375,
+        "f1": 0.8484848484848485,
+        "precision": 0.8235294117647058,
+        "recall": 0.875,
+        "mean_p_refusal": 0.5353695154190063
+      }
+    }
+  },
+  "note": "This is an interim D2 layer-selection protocol. It fixes prompt_label=harm and does not replace a future full 2x2 protocol with clean safe|refusal rows.",
+  "outputs": {
+    "layers": "data\\validation\\itw_manual_d2\\qwen\\harm_only_dev_test_layer_selection\\qwen_d2_harm_only_dev_test_layers.csv",
+    "predictions": "data\\validation\\itw_manual_d2\\qwen\\harm_only_dev_test_layer_selection\\qwen_d2_harm_only_dev_test_predictions.csv",
+    "summary": "data\\validation\\itw_manual_d2\\qwen\\harm_only_dev_test_layer_selection\\qwen_d2_harm_only_dev_test_summary.json",
+    "report": "data\\validation\\itw_manual_d2\\qwen\\harm_only_dev_test_layer_selection\\report.md"
+  }
+}
