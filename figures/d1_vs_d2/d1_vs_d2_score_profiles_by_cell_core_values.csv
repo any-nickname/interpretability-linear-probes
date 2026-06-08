@@ -1,0 +1,7 @@
+cell,score,n,mean,median,min,max
+harm|refusal,D1 harm-score,34,0.882396,0.984697,0.179776,0.999990
+harm|refusal,D2 refusal-score,34,0.698816,0.907640,0.001911,0.999846
+harm|compliance,D1 harm-score,34,0.663921,0.953129,0.000496,0.999876
+harm|compliance,D2 refusal-score,34,0.094089,0.004097,0.000000,0.839443
+safe|compliance,D1 harm-score,100,0.254177,0.037715,0.000001,0.996620
+safe|compliance,D2 refusal-score,100,0.093380,0.002829,0.000000,0.958101

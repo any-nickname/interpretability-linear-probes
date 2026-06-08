@@ -1,0 +1,15 @@
+variant,metric,value
+source_matched,selected_layer,17
+source_matched,dev_n,30
+source_matched,test_n,24
+source_matched,selected_dev_auroc,0.964444
+source_matched,selected_test_auroc,0.750000
+source_matched,selected_test_accuracy,0.625000
+source_matched,selected_test_f1,0.470588
+harm_only_max,selected_layer,18
+harm_only_max,dev_n,36
+harm_only_max,test_n,32
+harm_only_max,selected_dev_auroc,0.938272
+harm_only_max,selected_test_auroc,0.921875
+harm_only_max,selected_test_accuracy,0.781250
+harm_only_max,selected_test_f1,0.758621

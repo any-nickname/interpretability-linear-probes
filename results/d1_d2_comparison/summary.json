@@ -1,0 +1,106 @@
+{
+  "d1_selected_layer": 25,
+  "d2_selected_layer": 18,
+  "d2_itw_control_layer": 20,
+  "prompt_behavior_association": {
+    "itw_core": {
+      "dataset": "itw_core",
+      "n_binary": 285,
+      "prompt_behavior_counts": {
+        "harm|compliance": 130,
+        "harm|refusal": 9,
+        "safe|compliance": 137,
+        "safe|refusal": 9
+      },
+      "behavior_by_prompt_label": {
+        "harm": {
+          "compliance": 130,
+          "refusal": 9
+        },
+        "safe": {
+          "compliance": 137,
+          "refusal": 9
+        }
+      },
+      "accuracy_if_refusal_equals_harm": 0.512280701754386,
+      "mcc_prompt_label_vs_behavior": 0.006379179727961631,
+      "auroc_prompt_label_predicts_behavior": 0.5065543071161048
+    },
+    "ood_balanced_200": {
+      "dataset": "ood_balanced_200",
+      "n_binary": 200,
+      "prompt_behavior_counts": {
+        "harm|refusal": 96,
+        "safe|compliance": 100,
+        "safe|refusal": 4
+      },
+      "behavior_by_prompt_label": {
+        "harm": {
+          "refusal": 96
+        },
+        "safe": {
+          "compliance": 100,
+          "refusal": 4
+        }
+      },
+      "accuracy_if_refusal_equals_harm": 0.98,
+      "mcc_prompt_label_vs_behavior": 0.9607689228305227,
+      "auroc_prompt_label_predicts_behavior": 0.98
+    }
+  },
+  "selected_score_correlation_ood_test": {
+    "split": "ood_test",
+    "n": 100,
+    "d1_layer": 25,
+    "d2_layer": 18,
+    "pearson": 0.6081903694325235,
+    "spearman": 0.7127375501803191
+  },
+  "same_layer_cosine_at_d2_selected_layer_18": 0.11533577740192413,
+  "same_layer_cosine_at_d1_selected_layer_25": 0.08525458723306656,
+  "error_overlap": [
+    {
+      "split": "ood_dev",
+      "n": 100,
+      "counts": {
+        "harm|refusal|False|False": 3,
+        "harm|refusal|False|True": 2,
+        "harm|refusal|True|False": 14,
+        "harm|refusal|True|True": 29,
+        "safe|compliance|False|False": 1,
+        "safe|compliance|False|True": 14,
+        "safe|compliance|True|False": 1,
+        "safe|compliance|True|True": 34,
+        "safe|refusal|False|False": 1,
+        "safe|refusal|True|False": 1
+      },
+      "d1_error_count": 21,
+      "d2_error_count": 21,
+      "both_error_count": 5,
+      "either_error_count": 37
+    },
+    {
+      "split": "ood_test",
+      "n": 100,
+      "counts": {
+        "harm|refusal|False|False": 1,
+        "harm|refusal|False|True": 2,
+        "harm|refusal|True|False": 11,
+        "harm|refusal|True|True": 34,
+        "safe|compliance|False|False": 3,
+        "safe|compliance|False|True": 8,
+        "safe|compliance|True|False": 3,
+        "safe|compliance|True|True": 36,
+        "safe|refusal|False|True": 2
+      },
+      "d1_error_count": 16,
+      "d2_error_count": 18,
+      "both_error_count": 4,
+      "either_error_count": 30
+    }
+  ],
+  "notes": [
+    "Cosine is computed only within the same layer and uses raw-space directions coef/scaler_scale.",
+    "D1 selected layer 25 and D2 selected layer 18 are not directly compared by cosine because they live in different layers."
+  ]
+}

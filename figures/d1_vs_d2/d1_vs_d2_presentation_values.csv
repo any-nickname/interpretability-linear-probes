@@ -1,0 +1,7 @@
+metric,value
+n,68
+d1_layer25_behavior_auroc,0.710208
+d2_layer18_behavior_auroc,0.924740
+d2_layer27_diagnostic_behavior_auroc,0.939446
+d1_l25_d2_l18_pearson,0.337606
+d1_l25_d2_l18_spearman,0.424721

@@ -1,0 +1,12 @@
+metric,dataset,value
+selected_layer,mean_ood_dev,25
+mean_dev_auroc,mean_ood_dev,0.865922
+mean_test_auroc,mean_ood_test,0.861121
+d1_layer25_test_auroc,ood_advbench_alpaca,0.955296
+tfidf_test_auroc,ood_advbench_alpaca,0.665500
+d1_layer25_test_auroc,ood_harmbench_alpaca,0.794150
+tfidf_test_auroc,ood_harmbench_alpaca,0.477900
+d1_layer25_test_auroc,ood_jailbreakbench,0.796800
+tfidf_test_auroc,ood_jailbreakbench,0.617200
+d1_layer25_test_auroc,ood_xstest,0.898240
+tfidf_test_auroc,ood_xstest,0.580500

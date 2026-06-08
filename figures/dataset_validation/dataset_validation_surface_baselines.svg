@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<rect width="1920" height="1080" fill="#ffffff"/>
+<text x="120" y="130" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="700" fill="#4b4f56">Dataset validation: no easy surface shortcut</text>
+<text x="122" y="192" font-family="Segoe UI, Arial, sans-serif" font-size="27" fill="#7a7f87">ITW manual pairs, exact train/eval split</text>
+<rect x="530.0" y="205" width="212.7" height="555" fill="#f4f6f8"/>
+<line x1="636.4" y1="225" x2="636.4" y2="735" stroke="#d9dde3" stroke-width="2"/>
+<text x="610.4" y="785" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#7a7f87">0.5</text>
+<line x1="849.1" y1="225" x2="849.1" y2="735" stroke="#d9dde3" stroke-width="2"/>
+<text x="823.1" y="785" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#7a7f87">0.6</text>
+<line x1="1061.8" y1="225" x2="1061.8" y2="735" stroke="#d9dde3" stroke-width="2"/>
+<text x="1035.8" y="785" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#7a7f87">0.7</text>
+<line x1="1274.5" y1="225" x2="1274.5" y2="735" stroke="#d9dde3" stroke-width="2"/>
+<text x="1248.5" y="785" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#7a7f87">0.8</text>
+<line x1="1487.3" y1="225" x2="1487.3" y2="735" stroke="#d9dde3" stroke-width="2"/>
+<text x="1461.3" y="785" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#7a7f87">0.9</text>
+<line x1="1700.0" y1="225" x2="1700.0" y2="735" stroke="#d9dde3" stroke-width="2"/>
+<text x="1674.0" y="785" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#7a7f87">1.0</text>
+<line x1="636.4" y1="205" x2="636.4" y2="735" stroke="#4b4f56" stroke-width="4"/>
+<text x="648.4" y="234" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700" fill="#4b4f56">chance 0.50</text>
+<text x="120" y="288" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#4b4f56">Shuffled-label probe</text>
+<text x="120" y="332" font-family="Segoe UI, Arial, sans-serif" font-size="23" fill="#7a7f87">sanity check, mean over layers</text>
+<rect x="622.0" y="262" width="14.4" height="48" rx="16" fill="#c99aba"/>
+<circle cx="622.0" cy="284" r="11" fill="#4b4f56"/>
+<text x="644.0" y="296" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#4b4f56">0.493</text>
+<text x="120" y="418" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#4b4f56">Token count only</text>
+<text x="120" y="462" font-family="Segoe UI, Arial, sans-serif" font-size="23" fill="#7a7f87">best direction, Qwen chat-template tokens</text>
+<rect x="636.4" y="392" width="82.7" height="48" rx="16" fill="#9cc7e8"/>
+<circle cx="719.1" cy="414" r="11" fill="#4b4f56"/>
+<text x="741.1" y="426" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#4b4f56">0.539</text>
+<text x="120" y="548" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#4b4f56">Length/token LogReg</text>
+<text x="120" y="592" font-family="Segoe UI, Arial, sans-serif" font-size="23" fill="#7a7f87">char + word + Qwen token count</text>
+<rect x="636.4" y="522" width="70.9" height="48" rx="16" fill="#f5d67b"/>
+<circle cx="707.3" cy="544" r="11" fill="#4b4f56"/>
+<text x="729.3" y="556" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#4b4f56">0.533</text>
+<text x="120" y="678" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#4b4f56">TF-IDF LogReg</text>
+<text x="120" y="722" font-family="Segoe UI, Arial, sans-serif" font-size="23" fill="#7a7f87">1-5 gram text-only classifier</text>
+<rect x="636.4" y="652" width="117.0" height="48" rx="16" fill="#ee9999"/>
+<circle cx="753.4" cy="674" r="11" fill="#4b4f56"/>
+<text x="775.4" y="686" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#4b4f56">0.555</text>
+<line x1="530" y1="735" x2="1700" y2="735" stroke="#d9dde3" stroke-width="2"/>
+<text x="530" y="950" font-family="Segoe UI, Arial, sans-serif" font-size="27" fill="#7a7f87">AUROC: 0.5 = random ranking; 1.0 = perfectly separable.</text>
+<text x="530" y="992" font-family="Segoe UI, Arial, sans-serif" font-size="31" font-weight="700" fill="#4b4f56">Takeaway: text/length-only checks stay close to chance on the ITW manual pairs.</text>
+<text x="530" y="1034" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#7a7f87">Exact ITW train/eval split: 236 train records, 60 eval records.</text>
+</svg>

@@ -1,0 +1,6 @@
+metric,auroc,note
+Shuffled-label probe,0.493243,"sanity check, mean over layers"
+Token count only,0.538889,"best direction, Qwen chat-template tokens"
+Length/token LogReg,0.533333,char + word + Qwen token count
+TF-IDF LogReg,0.555000,1-5 gram text-only classifier
+D1 activation probe,0.953333,"same ITW eval split, layer 12"
